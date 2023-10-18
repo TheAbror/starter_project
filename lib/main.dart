@@ -65,3 +65,61 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+
+
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+
+//   ApiProvider.create();
+
+//   await FlutterDownloader.initialize(debug: true, ignoreSsl: true);
+
+//   /// For logging
+//   setUpLogging();
+
+//   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then(
+//     (_) {
+//       runApp(
+//         MultiBlocProvider(
+//           providers: [
+//             BlocProvider(create: (context) => AuthBloc()),
+//             BlocProvider(create: (context) => SplashBloc()),
+//             BlocProvider(create: (context) => ProfileBloc()),
+//             BlocProvider(create: (context) => InquiryBloc()),
+//             BlocProvider(create: (context) => DashboardBloc()),
+//           ],
+//           child: const MyApp(),
+//         ),
+//       );
+//     },
+//   );
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocBuilder<ProfileBloc, ProfileState>(
+//       builder: (context, state) {
+//         return ScreenUtilInit(
+//           designSize: const Size(360, 800),
+//           minTextAdapt: true,
+//           splitScreenMode: true,
+//           builder: (context, child) {
+//             return MaterialApp(
+//               theme: state.isLightMode ? lightTheme() : darkTheme(),
+//               themeMode: ThemeMode.system,
+//               debugShowCheckedModeBanner: false,
+//               builder: BotToastInit(),
+//               navigatorObservers: [BotToastNavigatorObserver()],
+//               onGenerateRoute: MainRouteGenerator().generateRoute,
+//             );
+//           },
+//         );
+//       },
+//     );
+//   }
+// }
